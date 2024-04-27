@@ -1,19 +1,21 @@
+package pages;
+
 import org.openqa.selenium.By;
 
-class DocumentationPage extends BasePage {
+public class DocumentationPage extends BasePage {
 
     /**
      * Предполагаемые URLs открытия карточек продуктов на главной странице
      * */
-    String alfaApiSectionUrl = baseUrl + "products/alfa-api";
-    String alfaIDSectionUrl = baseUrl + "products/alfa-id";
-    String alfaPaySectionUrl = baseUrl + "products/alfa-pay";
-    By detailsAlfaAPI = By.xpath("(//*[contains(text(),'Подробнее')])[1]");
-    By detailsAlfaID = By.xpath("(//*[contains(text(),'Подробнее')])[2]");
-    By detailsAlfaPay = By.xpath("(//*[contains(text(),'Подробнее')])[3]");
-    By allSection = By.xpath("(//*[contains(text(),'Все статьи раздела')])[1]");
+    public String alfaApiSectionUrl = baseUrl + "products/alfa-api";
+    public String alfaIDSectionUrl = baseUrl + "products/alfa-id";
+    public String alfaPaySectionUrl = baseUrl + "products/alfa-pay";
+    public By detailsAlfaAPI = By.xpath("(//*[contains(text(),'Подробнее')])[1]");
+    public By detailsAlfaID = By.xpath("(//*[contains(text(),'Подробнее')])[2]");
+    public By detailsAlfaPay = By.xpath("(//*[contains(text(),'Подробнее')])[3]");
+    public By allSection = By.xpath("(//*[contains(text(),'Все статьи раздела')])[1]");
     //Общая информация
-    String specificationIntroUrl = baseUrl + "products/alfa-api/documentation/articles/specification/articles/intro/intro";
+    public String specificationIntroUrl = baseUrl + "products/alfa-api/documentation/articles/specification/articles/intro/intro";
     String checkListUrl = baseUrl + "products/alfa-api/documentation/articles/specification/articles/check-list/check-list";
     String scopesUrl = baseUrl + "products/alfa-api/documentation/articles/specification/articles/scopes/scopes";
     String channelProtectionUrl = baseUrl + "products/alfa-api/documentation/articles/specification/articles/channel-protection/channel-protection";
@@ -260,7 +262,7 @@ class DocumentationPage extends BasePage {
     String exOutPayUrl = baseUrl + "products/alfa-api/documentation/articles/sbp-b2b/articles/execute-outgoing-payment/v1/execute-outgoing-payment";
     String outPayUrl = baseUrl + "products/alfa-api/documentation/articles/sbp-b2b/articles/outgoing-payments/v1/outgoing-payments";
     String outPayStUrl = baseUrl + "products/alfa-api/documentation/articles/sbp-b2b/articles/outgoing-payment-status/v1/outgoing-payment-status";
-    String alfaIDIntroUrl = baseUrl + "products/alfa-api/documentation/articles/alfa-id/articles/intro/intro";
+    public String alfaIDIntroUrl = baseUrl + "products/alfa-api/documentation/articles/alfa-id/articles/intro/intro";
     String sandboxIntroUrl = baseUrl + "products/alfa-api/documentation/articles/sandbox/articles/intro/intro";
     String sdkIntroUrl = baseUrl + "products/alfa-api/documentation/articles/sdk/articles/intro/intro";
     String fileTransferIntroUrl = baseUrl + "products/alfa-api/documentation/articles/secure-file-transfer/articles/intro/intro";
@@ -270,7 +272,7 @@ class DocumentationPage extends BasePage {
     String accountsListUrl = baseUrl + "products/alfa-api/documentation/articles/accounts/articles/list/v1/list";
     String escrowBuildProjectsUrl = baseUrl + "products/alfa-api/documentation/articles/escrow/articles/build-projects/v1/build-projects";
     String customerInfoUrl = baseUrl + "products/alfa-api/documentation/articles/customer-info/articles/customer-info/v1/customer-info";
-    String paymentsCreateUrl = baseUrl + "products/alfa-api/documentation/articles/payments/articles/create/v2/create";
+    public String paymentsCreateUrl = baseUrl + "products/alfa-api/documentation/articles/payments/articles/create/v2/create";
     String employedIntroUrl = baseUrl + "products/alfa-api/documentation/articles/selfemployed/articles/intro/intro";
     String sbpMerchantsLegalUrl = baseUrl + "products/alfa-api/documentation/articles/sbp-merchants/articles/legal/v1/legal";
     String scoringFirstUrl = baseUrl + "products/alfa-api/documentation/articles/scoring/articles/scoring/v1/scoring";
@@ -288,7 +290,7 @@ class DocumentationPage extends BasePage {
     String postReportPaymentsSbpUrl = baseUrl + "products/alfa-api/documentation/articles/sbp-reports/articles/report-payments-sbp/v1/report-payments-sbp";
     String generateQrcUrl = baseUrl + "products/alfa-api/documentation/articles/sbp-c2b/articles/generate-qrc/v1/generate-qrc";
     String sbpB2bIntroUrl = baseUrl + "products/alfa-api/documentation/articles/sbp-b2b/articles/intro/intro";
-    String outPaymentStatusUrl = baseUrl + "products/alfa-api/documentation/articles/sbp-b2b/articles/outgoing-payment-status/v1/outgoing-payment-status";
+    public String outPaymentStatusUrl = baseUrl + "products/alfa-api/documentation/articles/sbp-b2b/articles/outgoing-payment-status/v1/outgoing-payment-status";
 
 
     String[] redirectFirstProductCardUrls = {
@@ -323,7 +325,7 @@ class DocumentationPage extends BasePage {
             sbpB2bIntroUrl
     };
 
-    String[] docPointsUrls = {
+    public String[] docPointsUrls = {
     specificationIntroUrl,
     checkListUrl,
     scopesUrl,
@@ -502,13 +504,13 @@ class DocumentationPage extends BasePage {
     /**
      * Элементры открытых страниц документации
      * */
-    By headerLocator = By.xpath("(//h4[@class='typography__component_1ve0s content-header__title typography__styrene-medium_rdy6f typography__medium_1ve0s typography__primary_1dy99'])");
-    By contentNavigationRight = By.xpath("//*[@class='content-navigation-link content-navigation-link_right']");
-    By footer = By.xpath("//footer[@class='footer']");
+    public By headerLocator = By.xpath("(//h4[@class='typography__component_1ve0s content-header__title typography__styrene-medium_rdy6f typography__medium_1ve0s typography__primary_1dy99'])");
+    public By contentNavigationRight = By.xpath("//*[@class='content-navigation-link content-navigation-link_right']");
+    public By footer = By.xpath("//footer[@class='footer']");
     By level0PointsListLocator = By.xpath("//div[@class='navigation-left__item-block navigation-left__item-block_level_0']");
     By level1PointsListLocator = By.xpath("//div[@class='navigation-left__item-block navigation-left__item-block_level_1']");
     By fileUrl = By.xpath("//a[contains(@href, '/s3/')]");
     By commonPointsLocator = By.xpath("//span[@class='navigation-left__text typography__primary-small_1fmfd typography__regular_1fmfd']");
     By level2PointLocator = By.xpath("//div[@class='navigation-left__item-block navigation-left__item-block_level_2']");
-    By fileLink = By.xpath("//a[contains(@href, '/s3/')]");
+    public By fileLink = By.xpath("//a[contains(@href, '/s3/')]");
 }

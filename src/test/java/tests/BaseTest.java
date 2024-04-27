@@ -1,3 +1,6 @@
+package tests;
+
+import helpers.Logger;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.AfterEach;
@@ -10,6 +13,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.*;
 
 import javax.net.ssl.*;
 import java.io.IOException;
@@ -51,7 +55,7 @@ public class BaseTest {
     }
 
     public void prepareDriver() {
-        //если все же нужно будут настройки для safari, как на chrome, то исправлю
+        //если все же нужны будут настройки для safari, как на chrome, то исправлю
         if (osName.contains("mac")) {
             downloadPath = System.getProperty("user.home") + "/src/test/java/downloadedFiles";
             if (System.getProperty("browser", "safari").equals("safari")) {
@@ -88,8 +92,8 @@ public class BaseTest {
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
+    // доверяю SSL внутри для DEV, для прода шаг не нужен
     public void trustAllCerts() {
-        // доверяю SSL внутри для DEV, для прода шаг не нужен
         if (Objects.equals(documentationPage.baseUrl, "https://developers-portal-ui.baas-dev.alfaintra.net/")) {
             try {
                 TrustManager[] trustAllCerts = new TrustManager[]{

@@ -1,4 +1,7 @@
+package helpers;
+
 import org.fusesource.jansi.Ansi;
+import tests.BaseTest;
 
 public class Logger extends BaseTest {
     public final String LOG_FORMAT = "|%-10s|%-20s|%-30s]|%-10s|%n";
